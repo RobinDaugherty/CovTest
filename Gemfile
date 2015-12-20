@@ -32,6 +32,25 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'coveralls', require: false
+
+group :test, :development do
+  # Testing. These are also needed in development so that Rails generators are available.
+  gem 'rspec'
+  gem 'fivemat'
+  gem 'rspec-html-matchers'
+  gem 'rspec-collection_matchers'
+  gem 'rspec-mocks'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'lorem-ipsum'
+  gem 'coveralls', require: false
+  gem 'rspec-sidekiq'
+  gem 'database_cleaner'
+  gem 'timecop'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
